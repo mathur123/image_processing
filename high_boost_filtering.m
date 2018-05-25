@@ -1,0 +1,1 @@
+% High Boost Filteringclear all;clc;pkg load image; img = imread("lena.png");gry = double(rgb2gray(img));% LPFlpf = (1/9)*ones(3,3);res = imfilter(gry, lpf);k=1;% Laplacing filterfil = [0 -1 0;-1 k+4 -1;0 -1 0];% Laplaced + Blurredfinal = imfilter(gry, fil) + res;figure;imshow(uint8(gry));figure;imshow(uint8(final));
