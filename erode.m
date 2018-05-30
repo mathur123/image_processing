@@ -1,0 +1,1 @@
+clear all;clc;BW = zeros(20,20);BW(3:5,3:5) = 1;BW(3:5,7:9) = 1;figure;imshow(imresize(BW,40,'nearest'));SE = strel('arbitrary',eye(3));BW2 = imerode(BW,SE);figure;imshow(imresize(BW2,40,'nearest'));
