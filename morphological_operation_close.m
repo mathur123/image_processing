@@ -1,0 +1,1 @@
+clear all;clc;BW = zeros(20,20);BW(3:5,3:5) = 1;BW(3:5,7:9) = 1;# show originalfigure;imshow(imresize(BW,40,'nearest'));# imclose first performs dilate then erodeSE = strel('rectangle',[3,3]);BW2 = imclose(BW,SE);# show open opertionfigure;imshow(imresize(BW2,40,'nearest'));
